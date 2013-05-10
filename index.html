@@ -1,0 +1,178 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>CoffeeStar</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script src="js/script.js"></script>
+	<link rel="stylesheet" href="css/style.css"/>
+
+</head> 
+<body> 
+
+<div data-role="page" id="index">
+
+	<div data-role="header">
+		<h1>CoffeeStar</h1>
+		<a href="#addPoint"
+		data-icon="plus"
+		data-theme = "b"
+		class="ui-btn-right">Login</a>	
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<div id="map"> </div>	
+<div data-role="footer" data-id="foo1" data-position="fixed">
+	<div data-role="navbar"data-icon="delete" >
+		<ul>
+			<li><a data-icon="info" href="#index" class="ui-btn-active ui-state-persist" ></a></li>
+			<li><a data-icon="search" href="#search"></a></li>
+			<li><a data-icon="star" href="#addPoint"></a></li>
+			<li><a  data-icon="gear" href="#option"></a></li>
+
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /footer -->	
+			
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+
+
+
+<div data-role="page" id="search" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Suche</h1>
+	</div><!-- /header -->
+
+	
+<label for="search-basic">Search Input:</label>
+<input type="search" name="search" id="search-basic" value="" />
+
+
+
+
+<div data-role="footer" data-position="fixed">		
+	<div data-role="navbar"data-icon="delete">
+		<ul>
+			<li><a data-icon="info" href="#index"></a></li>
+			<li><a data-icon="search" href="#search" class="ui-btn-active ui-state-persist"></a></li>
+			<li><a data-icon="star" href="#addPoint"></a></li>
+			<li><a  data-icon="gear" href="#option"  ></a></li>
+
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /footer -->
+</div>
+
+</div><!-- /page -->
+
+
+
+
+
+
+
+
+
+
+<div data-role="page" id="addPoint" data-add-back-btn="true">
+
+	<div data-role="header">
+	<a href="#index">zurück</a>	
+
+		<h1>neues Cafe hinzufügen</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+<p>Es wird deine aktuelle Position als neuer Punkt eingefügt</p>	
+<p>Die Adresse an deiner Postion ist:</p>
+<p id="geocodedAdress">Adresse wird ermittelt...</p>
+
+<form method="post" action="php/newPoint.php" id="addPointForm">
+<input type="text" name="name" placeholder="Name des Cafe" required />
+
+<input type="hidden" name="lat" value"">
+<input type="hidden" name="lng" value"">
+
+<select name="public" data-role="slider">
+<option value="1">öffentlich</option>
+<option value="0">privat</option>
+</select>
+
+<div data-role="fieldcontain">
+   <label for="slider-2">Geschmack/Qualität</label>
+   <input type="range" name="geschmack" id="slider-2" value="3" min="1" max="5" data-highlight="true" />
+</div>
+<div data-role="fieldcontain">
+   <label for="slider-2">Essen/Getränke</label>
+   <input type="range" name="drinking" id="slider-2" value="3" min="1" max="5"  data-highlight="true" />
+</div>
+<div data-role="fieldcontain" >
+
+   <label for="slider-2">Ambiente/Bedienung</label>
+   <input type="range" name="ambient" id="slider-2" value="3" min="1" max="5" data-highlight="true" />
+</div>
+<input type="text" name="Beschreibung" placeholder="du hast 150 Zeichen frei um das Kaffee näher zu beschreiben..." required />
+
+<input type="submit" value="Cafe eintragen">
+
+
+
+</form>	
+<div data-role="footer" data-position="fixed">		
+	<div data-role="navbar"data-icon="delete">
+		<ul>
+			<li><a data-icon="info" href="#index"></a></li>
+			<li><a data-icon="search" href="#"></a></li>
+			<li><a data-icon="star" href="#addPoint" class="ui-btn-active ui-state-persist" ></a></li>
+			<li><a  data-icon="gear" href="#option"></a></li>
+
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /footer -->
+</div>
+
+</div><!-- /page -->
+
+
+
+<div data-role="page" id="option" data-add-back-btn="true">
+
+	<div data-role="header">
+	
+
+		<h1>Optionenmenü</h1>
+	</div><!-- /header -->
+
+	
+
+
+
+
+<div data-role="footer" data-position="fixed">		
+	<div data-role="navbar"data-icon="delete">
+		<ul>
+			<li><a data-icon="info" href="#index"></a></li>
+			<li><a data-icon="search" href="#"></a></li>
+			<li><a data-icon="star" href="#addPoint"></a></li>
+			<li><a  data-icon="gear" href="#option" class="ui-btn-active ui-state-persist" ></a></li>
+
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /footer -->
+</div>
+
+</div><!-- /page -->
+
+
+
+
+</body>
+</html>
