@@ -1,11 +1,8 @@
-html, body {
-	height:100%;
-	
+html, body, #map {
+    height: 100%
 }
 
-#map, #index, #index .ui-content {
-	height:95%;
-	padding: 0;
-	
+#index, #index .ui-content {
+    height: 95%;
+    padding: 0
 }
-
