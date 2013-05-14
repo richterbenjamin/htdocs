@@ -1,8 +1,26 @@
-html, body, #map {
+html, body, {
     height: 100%
 }
 
+#map
+{
+	height:50%;
+	}
+
+
 #index, #index .ui-content {
     height: 95%;
-    padding: 0
+    padding: 0px;
 }
+#Caffeeliste
+{
+	height:50%;
+	margin:10px;
+	
+	}
+
+#p {
+	padding:50px;
+	
+	
+	}
