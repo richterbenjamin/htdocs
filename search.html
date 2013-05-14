@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>CoffeeStar</title> 
+	 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+<div data-role="page" id="search" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Suche</h1>
+	</div><!-- /header -->
+
+	
+<label for="search-basic">Suche ein Caffee an einem bestimmten Ort:</label>
+<input type="search" name="search" id="search-basic" value="" />
+
+<p> oder nutze die Umkreissuche um Caffes in deiner Umgebung zu finden:</p>
+
+<a href="index.html" data-role="button">Umgebungssuche</a>
+
+
+<div data-role="footer" data-position="fixed">		
+	<div data-role="navbar"data-icon="delete">
+		<ul>
+			<li><a data-icon="info" href="#/index.html"  ></a></li>
+			<li><a data-icon="search" href="#/search.html" class="ui-btn-active ui-state-persist"></a></li>
+			<li><a data-icon="star" href="#/new.html"></a></li>
+			<li><a  data-icon="gear" href="#/option.html"></a></li>
+
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /footer -->
+</div>
+
+</div><!-- /page -->
+
+
+
+
+
+
