@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require_once('include.php');
 
 $name = $_POST['name'];
 $public = $_POST['public'];
@@ -15,7 +15,7 @@ $sql = 'INSERT INTO
         VALUES
         (:name, :public, :lat, :lng)';
 
-$query = $db->prepare($sql);
+
 $query->execute(
     array(
         'name'   => $name,

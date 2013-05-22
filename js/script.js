@@ -1,8 +1,10 @@
-$(document).on('pageinit', '#index', initMap);
+$(document).on('pageshow', '#index', initMap);
 $(document).on('pageshow', '#addPoint', prepareForm);
 
 
 function initMap() {
+
+
     var myOptions = {
         zoom:7,
         center:new google.maps.LatLng(50.76, 11.64),
@@ -16,19 +18,21 @@ function initMap() {
 
     navigator.geolocation.getCurrentPosition(
         function (position) {
+
+
             var userPos = new google.maps.LatLng(
                 position.coords.latitude,
                 position.coords.longitude
             );
 
-            map.setCenter(userPos);
+            map.panTo(userPos);
             map.setZoom(16);
 
             var marker = new google.maps.Marker({
                 map:map,
                 position:userPos,
                 animation:google.maps.Animation.DROP,
-                icon: '/img/home.png'
+                icon: '../img/home.png'
             });
 
             var circle = new google.maps.Circle({
@@ -43,7 +47,7 @@ function initMap() {
         }
     );
 
-    $.getJSON('php/listPoints.php', displayPoints);
+    $.getJSON('../php/listPoints.php', displayPoints);
 }
 
 function displayPoints(points) {
