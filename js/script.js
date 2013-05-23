@@ -50,6 +50,11 @@ function initMap() {
     $.getJSON('../php/listPoints.php', displayPoints);
 }
 
+
+
+
+
+
 function displayPoints(points) {
     for (var i = 0; i < points.length; i++) {
 

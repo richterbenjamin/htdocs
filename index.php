@@ -48,7 +48,7 @@ if ( !isset($_SESSION['logged-in']) !== true) {
 
 	<div data-role="content">
 
-	<div  data-position="fixed" id="map"> </div>
+	<div data-position="fixed" id="map"> </div>
     
     <div data-inset="false"   data-type="horizontal"  data-iconpos="notext" data-position="fixed" class="foot">
        <div class="hinweis"  >
@@ -73,8 +73,8 @@ if ( !isset($_SESSION['logged-in']) !== true) {
                 <p>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte.</p>
             
             
-                </li>
-                    </ul>
+           </li>
+</ul>
     </div><!-- /collapsible -->
     </div>
 
