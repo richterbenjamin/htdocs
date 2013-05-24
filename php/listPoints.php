@@ -1,7 +1,9 @@
 <?php
-require 'db.php';
+require_once('../php/include.php');
 
-$query = $db->prepare('SELECT * FROM marker');
+$query = $coffestar->prepare('SELECT * FROM marker');
 $query->execute();
 echo json_encode( $query->fetchAll() );
+echo "<p>fertig</p>";
+ 
 ?>

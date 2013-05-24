@@ -68,15 +68,17 @@ if( isset($form) ) {
     <div data-role="content">
 
 
+		<p>Bitte geben sie ihre Logindaten ein: </p>
 
         <form action="<?php $PHP_SELF; ?>" method="post" >
-            <input name="usr" type="text" value="<?php echo "$usr";?>" placeholder="Name" required="required"/>
-            <input type="password" name="pswd" placeholder="Passwort" required="required" />
+            <input name="usr" type="text" value="<?php echo "$usr";?>" placeholder="Benutzername oder e-Mailaddresse" required/>
+            <input type="password" name="pswd" placeholder="Passwort" required />
 
             <input name="submit" type="submit" value="Login"  data-inline="true" data-rel="dialog" data-transition="slidedown"/>
 
             <a href="../index.php" data-role="button" data-inline="true" data-rel="dialog" data-transition="slidedown">Abbrechen</a>
         </form>
+
 
 
         <?php

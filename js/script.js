@@ -47,7 +47,7 @@ function initMap() {
         }
     );
 
-    $.getJSON('../php/listPoints.php', displayPoints);
+    $.getJSON('.../php/listPoints.php', displayPoints);
 }
 
 
@@ -130,7 +130,6 @@ function doReverseGeoCoding(position) {
         }
     );
 }
-
 
 
 

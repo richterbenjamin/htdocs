@@ -74,6 +74,7 @@ if ( !isset($_SESSION['logged-in']) !== true) {
             
             
            </li>
+           
 </ul>
     </div><!-- /collapsible -->
     </div>

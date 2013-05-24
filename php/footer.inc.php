@@ -2,7 +2,7 @@
 ?>
 
 
-<div data-role="footer" data-id="foo1" data-position="fixed">
+<div data-role="footer" data-id="foo1" data-position="fixed" data-fullscreen="false"	>
     <div data-role="navbar" data-icon="delete" >
         <ul>
             <li><a data-icon="info" href="index_member.php" <?php if ($thisPage=="index") echo " class=\"ui-btn-active ui-state-persist\""; ?> ></a></li>
