@@ -47,7 +47,7 @@ function initMap() {
         }
     );
 
-    $.getJSON('.../php/listPoints.php', displayPoints);
+    $.getJSON('listPoints.php', displayPoints);
 }
 
 
@@ -63,9 +63,9 @@ function displayPoints(points) {
             parseFloat(points[i].lng)
         );
 
-        var iconPath = 'img/public.png';
+        var iconPath = '../img/public.png';
         if (points[i].public == 0) {
-            iconPath = 'img/private.png';
+            iconPath = '../img/private.png';
         }
 
         var marker = new google.maps.Marker({
@@ -86,7 +86,7 @@ function displayPoints(points) {
 
 function prepareForm() {
     $.mobile.loading('show', {
-        text:'Warte auf GPS Signal',
+        text:'Warte auf GPSS Signal',
         textVisible:true
     });
 

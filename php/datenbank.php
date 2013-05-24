@@ -1,5 +1,5 @@
 <?php
-require_once('../php/include.php');
+require_once('include.php');
 
 $db_sel = mysql_select_db( coffeestar )
    or die("Auswahl der Datenbank fehlgeschlagennnn");

@@ -34,6 +34,11 @@ $thisPage="index";
 <div data-inset="false"   data-type="horizontal"  data-iconpos="notext" data-position="fixed">
 	<div data-role="collapsible"  data-inset="false"  data-collapsed-icon="arrow-u"  data-expanded-icon="arrow-d"  id="custom-collapsible" class="Caffeeliste" data-collapsed="false">
 <h2 data-role="list-divider" role="heading" >Cafés in deiner Nähe</h2>
+<form> 
+
+            <input type="hidden" name="lat" value="">
+            <input type="hidden" name="lng" value="">
+    </form>
 <ul data-role="listview" id="custom-list" class="caffeeliste">
             <li>
             	<a href="information.php" data-transition="slide">Cafe 01</a>
@@ -49,7 +54,10 @@ $thisPage="index";
              	   <p>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte.</p>
             </li>
  </ul>
+ 
     </div><!-- /collapsible -->
+    
+    
     </div>
 
 

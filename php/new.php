@@ -26,6 +26,8 @@
 
 <p>Bitte geben sie den Namen des Caffees ein</p>
 
+
+
 	<div data-role="fieldcontain">
 	  <label for="textinput2">Bitte gib den Namen des Caffees ein:</label>
 	  <input type="text" name="Caffeename" id="caffeename" value=""  />
@@ -64,7 +66,13 @@
     <option value="option4">Normalo</option>
     <option value="option5">Joungster</option>
   </select>
-  
+<form> 
+
+            <input type="hidden" name="lat" value="">
+            <input type="hidden" name="lng" value="">
+</form>
+
+
 </div>
     
 </div>

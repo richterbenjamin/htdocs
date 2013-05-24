@@ -37,7 +37,7 @@ if ( !isset($_SESSION['logged-in']) !== true) {
 </head> 
 <body> 
  
-<div data-role="page" id="index">
+<div data-role="page" id="index" >
 
 	<div data-role="header" data-position="fixed">
 		<h1>CoffeeStar</h1>
