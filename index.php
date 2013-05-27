@@ -48,7 +48,7 @@ if ( !isset($_SESSION['logged-in']) !== true) {
 
 	<div data-role="content">
 
-	<div data-position="fixed" id="map"> </div>
+	<div data-position="fixed" id="map" onload="initMap()"> </div>
     
     <div data-inset="false"   data-type="horizontal"  data-iconpos="notext" data-position="fixed" class="foot">
        <div class="hinweis"  >
