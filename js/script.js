@@ -64,10 +64,7 @@ function displayPoints(points) {
         );
 
         var iconPath = '../img/public.png';
-        if (points[i].public == 0) {
-            iconPath = '../img/private.png';
-        }
-
+      
         var marker = new google.maps.Marker({
             map:map,
             position: markerPos,
