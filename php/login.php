@@ -1,6 +1,6 @@
 <?php
 
-require_once('include.php');
+include('include.php');
 
 $error = '';
 
@@ -20,7 +20,8 @@ if( isset($form) ) {
         if( mysql_num_rows($sql) != 0 ) { //success
 
             $_SESSION['logged-in'] = true;
-
+            $row = mysql_fetch_array($sql);
+            $_SESSION["user_id"] = trim($row["user_id"]);
             header('Location: ../php/index_member.php');
 
             exit;
@@ -30,17 +31,26 @@ if( isset($form) ) {
     } else { $error = 'All information is not filled out correctly';}
 
 }
+/*$login_record = $YourLoginClassObject->Validate($email, $password);
 
+if ($login_record != NULL ) //user record exist
+{
+
+    $row = mysql_fetch_array($login_record);
+    $_SESSION["userid"] = trim($row["id"]);
+
+// also you can store other information in session variables, like
+    $_SESSION["first_name"] = $row["first_name"];
+    $_SESSION["last_name"] = $row["last_name"];
+
+
+}
+else
+{
+//user not exist
+}*/
 ?>
 
-
-
-
-
-
-</body>
-
-</html>
 
 
 
@@ -68,17 +78,15 @@ if( isset($form) ) {
     <div data-role="content">
 
 
-		<p>Bitte geben sie ihre Logindaten ein: </p>
 
         <form action="<?php $PHP_SELF; ?>" method="post" >
-            <input name="usr" type="text" value="<?php echo "$usr";?>" placeholder="Benutzername oder e-Mailaddresse" required/>
-            <input type="password" name="pswd" placeholder="Passwort" required />
+            <input name="usr" type="text" value="<?php echo "$usr";?>" placeholder="Name" required="required"/>
+            <input type="password" name="pswd" placeholder="Passwort" required="required" />
 
             <input name="submit" type="submit" value="Login"  data-inline="true" data-rel="dialog" data-transition="slidedown"/>
 
             <a href="../index.php" data-role="button" data-inline="true" data-rel="dialog" data-transition="slidedown">Abbrechen</a>
         </form>
-
 
 
         <?php

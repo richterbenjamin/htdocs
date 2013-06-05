@@ -6,7 +6,7 @@ include('../php/memberhead.inc.php')
 
     <div data-role="header" data-position="fixed">
 
-        <a href="../contact.html" data-rel="dialog"data-transition="slidedown">Kontakt</a>
+<!--        <a href="../contact.html" data-rel="dialog"data-transition="slidedown">Kontakt</a>-->
 
         <a href="logout.php"  data-icon="minus" class="ui-btn-right" data-transition="slidedown" >Logout</a>
 		<h1>Suche</h1>

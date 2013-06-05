@@ -1,5 +1,5 @@
 <?php
-
+//session_start();
 require_once('../php/include.php');
 
 // is the one accessing this page logged in or not?
@@ -8,7 +8,7 @@ if ( !isset($_SESSION['logged-in']) || $_SESSION['logged-in'] !== true) {
 
 // not logged in, move to login page
 
-    header('Location: ../index.php');
+   // header('Location: ../index.php');
 
     exit;
 

@@ -1,6 +1,6 @@
 
 <?php
-
+session_start();
 include('memberhead.inc.php')
 
 
@@ -14,13 +14,15 @@ $thisPage="index";
 
 ?>
 
-<div data-role="page" <?php echo "id=\"".$thisPage."\""?> >
+
+
+<div data-role="page" <?php echo "id=\"".$thisPage."\""?>>
 
     <div data-role="header" data-position="fixed">
-    
+
 <!--        <a href="../contact.html" data-rel="dialog"data-transition="slidedown">Kontakt</a>-->
 
-<!--        <a href="logout.php"  data-icon="minus" class="ui-btn-right" data-transition="slidedown" >Logout</a>-->
+        <a href="logout.php"  data-icon="minus" class="ui-btn-right" data-transition="slidedown" >Logout</a>
 
         <h1>CoffeeStar</h1>
     </div><!-- /header -->
@@ -29,42 +31,51 @@ $thisPage="index";
 
     <div data-role="content" >
 
-	<div  data-position="fixed" id="map"> </div>
+	<div data-position="fixed" id="map"> </div>
+
+<?php
+$sql = "SELECT * FROM `kaffee_db`";
+
+
+
+$result = mysql_query($sql);
+?>
+
+
+
 
 <div data-inset="false"   data-type="horizontal"  data-iconpos="notext" data-position="fixed">
-	<div data-role="collapsible"  data-inset="false"  data-collapsed-icon="arrow-u"  data-expanded-icon="arrow-d"  id="custom-collapsible" class="Caffeeliste" data-collapsed="false">
+    <div data-role="collapsible"  data-inset="false"  data-collapsed-icon="arrow-u"  data-expanded-icon="arrow-d"  id="custom-collapsible" class="Caffeeliste" data-collapsed="true">
 <h2 data-role="list-divider" role="heading" >Cafés in deiner Nähe</h2>
-<form> 
+<?php
+    echo "<ul data-role=\"listview\" id=\"custom-list\" class=\"caffeeliste\">";
 
-            <input type="hidden" name="lat" value="">
-            <input type="hidden" name="lng" value="">
-    </form>
-<ul data-role="listview" id="custom-list" class="caffeeliste">
-            <li>
-            	<a href="information.php" data-transition="slide">Cafe 01</a>
-				<?php include('../php/datenbank.php'); ?>
+$x = 0;
+    while ($x < 3)
+     {$cafe = mysql_fetch_array($result);
 
-            </li>
-            	
-            <li>
-            	<a href="information.php" information.php>Cafe 0</a>
-              	  <p>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte.</p>
-            </li>
-            <li><a href="information.php" information.php >Cafe 03</a>
-             	   <p>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte.</p>
-            </li>
- </ul>
- 
+    $x++;
+
+        echo "<li>";
+           echo  "<a href=\"#\" data-transition=\"slide\">".$cafe["name"]."</a>";
+            echo "<p>".$cafe["adresse"]."</p>";
+
+        echo "</li>";
+
+         if ($x==5) break;
+    };
+
+        echo "</ul>";
+?>
+
+
     </div><!-- /collapsible -->
-    
-    
     </div>
 
 
 
     <?php include('footer.inc.php'); ?>
-    
- 
+
 
 
 

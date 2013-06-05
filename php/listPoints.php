@@ -1,9 +1,7 @@
 <?php
+require 'db.php';
 
-require_once('include.php');
-
-$query = $db1->prepare('SELECT * FROM marker');
+$query = $db->prepare('SELECT name, lat, lng FROM kaffee_db');
 $query->execute();
 echo json_encode( $query->fetchAll() );
- 
 ?>
